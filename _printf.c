@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 	char *p;
 	unsigned int i;
 	va_list conspec;
+	char *s;
 
 	va_start(conspec, format);
 	for (p = format; *p != '\0'; p++)
@@ -21,7 +22,18 @@ int _printf(const char *format, ...)
 		p++;
 	}
 	switch(*p);
-	(
-
-	va_end;
+	{
+	case 'c':
+		i = va_arg(conspec, int);
+		_putchar(i);
+		break;
+	case 's':
+		s = va_arg(conspec, char *);
+		_puts(s);
+		break;
+	case '%':
+		_putchar('%');
+		break;
+	}
+	va_end(conspecs);
 }
