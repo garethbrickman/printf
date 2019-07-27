@@ -6,9 +6,22 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list list;
+	char *p;
+	unsigned int i;
+	va_list conspec;
 
-	va_start;
+	va_start(conspec, format);
+	for (p = format; *p != '\0'; p++)
+	{
+		while (p != '%')
+		{
+			_putchar(*p);
+			p++;
+		}
+		p++;
+	}
+	switch(*p);
+	(
 
 	va_end;
 }
