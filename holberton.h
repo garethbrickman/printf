@@ -20,5 +20,8 @@ struct dog
 typedef struct dog dog_t;
 /*Prototypes*/
 int _putchar(char c);
+void _puts(char *str);
+void rev_string(char *s);
+int _strlen(char *s);
 int _printf(const char *format, ...);
 #endif
