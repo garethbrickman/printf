@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	char *p;
+	const char *p;
 	unsigned int i, j;
 	va_list conspec;
 	char *s;
@@ -14,10 +14,10 @@ int _printf(const char *format, ...)
 	va_start(conspec, format);
 	for (p = format; *p != '\0'; p++)
 	{
-		while (*p != '%')
+		if  (*p != '%')
 		{
 			_putchar(*p);
-			p++;
+			continue;
 		}
 		p++;
 	}
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		_putchar('%');
 		break;
 	}
-	j = _strlen(*p);
+	j = _strlen(p);
 	va_end(conspec);
 	return (j);
 }
