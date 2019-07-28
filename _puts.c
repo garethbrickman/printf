@@ -2,17 +2,16 @@
 
 /**
  * _puts - function prints a string
- *
- *@str: char pointer
- *
+ * @str: char pointer
+ * @k: counter through string
  * Return: 0
  */
 
-void _puts(char *str, int *j)
+void _puts(char *str, int *k)
 {
 	while (*str)
 	{
-		_putchar(*str, j);
+		_putchar(*str, k);
 		str++;
 	}
 }

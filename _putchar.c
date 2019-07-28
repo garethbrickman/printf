@@ -4,12 +4,12 @@
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
- * @j: counter through string
+ * @k: counter through string
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c, int *j)
+int _putchar(char c, int *k)
 {
-	j++;
-	return(write(1, &c, 1));
+	k++;
+	return (write(1, &c, 1));
 }

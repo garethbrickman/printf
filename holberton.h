@@ -8,8 +8,8 @@
 /*Structs*/
 /*Typedefs*/
 /*Prototypes*/
-int _putchar(char c, int *j);
-void _puts(char *str, int *j);
+int _putchar(char c, int *k);
+void _puts(char *str, int *k);
 void rev_string(char *s);
 int _printf(const char *format, ...);
 #endif
