@@ -7,7 +7,8 @@
 int _printf(const char *format, ...)
 {
 	const char *p;
-	unsigned int i, j;
+	unsigned int i;
+	int k = 0;
 	va_list conspec;
 	char *s;
 
@@ -16,26 +17,24 @@ int _printf(const char *format, ...)
 	{
 		if  (*p != '%')
 		{
-			_putchar(*p);
+			_putchar(*p, &k);
 			continue;
 		}
-		p++;
+		switch(*(p + 1))
+		{
+		case 'c':
+			i = va_arg(conspec, int);
+			_putchar(i, &k);
+			break;
+		case 's':
+			s = va_arg(conspec, char *);
+			_puts(s, &k);
+			break;
+		case '%':
+			_putchar('%', &k);
+		break;
+		}
 	}
-	switch(*p)
-	{
-	case 'c':
-		i = va_arg(conspec, int);
-		_putchar(i);
-		break;
-	case 's':
-		s = va_arg(conspec, char *);
-		_puts(s);
-		break;
-	case '%':
-		_putchar('%');
-		break;
-	}
-	j = _strlen(p);
 	va_end(conspec);
-	return (j);
+	return (k);
 }
