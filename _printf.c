@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _printf - is a function that formats and prints data
- * @format:
+ * @format: format of data
  * Return: number of characters printed
  */
 int _printf(const char *format, ...)
@@ -15,13 +15,13 @@ int _printf(const char *format, ...)
 	va_start(conspec, format);
 	for (p = format; *p != '\0'; p++)
 	{
-		if  (*p != '%')
+		if (*p != '%')
 		{
 			_putchar(*p, &k);
 			continue;
 		}
 		p++;
-		switch(*(p))
+		switch (*p)
 		{
 		case 'c':
 			i = va_arg(conspec, int);
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			break;
 		case '%':
 			_putchar('%', &k);
-		break;
+			break;
 		}
 	}
 	va_end(conspec);
