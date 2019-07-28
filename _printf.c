@@ -20,7 +20,8 @@ int _printf(const char *format, ...)
 			_putchar(*p, &k);
 			continue;
 		}
-		switch(*(p + 1))
+		p++;
+		switch(*(p))
 		{
 		case 'c':
 			i = va_arg(conspec, int);
