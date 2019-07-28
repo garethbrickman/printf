@@ -1,7 +1,10 @@
 #ifndef HOL_H
 #define HOL_H
-#include<stdarg.h>
-#include<unistd.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 /*Structs*/
 /*Typedefs*/
 /*Prototypes*/
