@@ -41,11 +41,6 @@ int _printf(const char *format, ...)
 			break;
 		case 'd':
 			j = va_arg(conspec, int);
-			if (j < 0)
-			{
-				j = -j;
-				_putchar('-', &k);
-			}
 			_print_number(j, &k);
 			break;
 		}
