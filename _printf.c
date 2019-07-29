@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 {
 	const char *p;
 	unsigned int i;
+	int j;
 	int k = 0;
 	va_list conspec;
 	char *s;
@@ -37,6 +38,15 @@ int _printf(const char *format, ...)
 			break;
 		case '%':
 			_putchar('%', &k);
+			break;
+		case 'd':
+			j = va_arg(conspec, int);
+			if (j < 0)
+			{
+				j = -j;
+				_putchar('-', &k);
+			}
+			_puts(convert(i, 10), &k);
 			break;
 		}
 	}
