@@ -43,6 +43,10 @@ int _printf(const char *format, ...)
 			j = va_arg(conspec, int);
 			_print_number(j, &k);
 			break;
+		case 'i':
+			j = va_arg(conspec, int);
+			_print_number(j, &k);
+			break;
 		}
 	}
 	va_end(conspec);
