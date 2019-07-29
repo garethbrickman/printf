@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 				j = -j;
 				_putchar('-', &k);
 			}
-			_puts(convert(i, 10), &k);
+			_print_number(j, &k);
 			break;
 		}
 	}
