@@ -1,7 +1,6 @@
 #ifndef HOL_H
 #define HOL_H
 #include <stdarg.h>
-#include <unistd.h>
 /*Structs*/
 /*Typedefs*/
 /*Prototypes*/
