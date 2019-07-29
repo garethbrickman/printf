@@ -19,7 +19,7 @@ void _print_number(int n, int *k)
 	for (y = 1000000000; y > 0; y = y / 10)
 	{
 		if (n / y != 0)
-			_putchar('-');
+			_putchar(('-'), k);
 			_putchar(((n / y) % 10 + '0'), k);
 	}
 	else
