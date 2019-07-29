@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_list conspec;
 	char *s;
 
-	if (format == NULL)
+	if (!format)
 	{
 		return (-1);
 	}
