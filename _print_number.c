@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-void print_number(int n, int *k)
+void _print_number(int n, int *k)
 {
 	int y = 1000000000;
 	int x, z;
