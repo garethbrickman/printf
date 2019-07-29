@@ -12,6 +12,10 @@ int _printf(const char *format, ...)
 	va_list conspec;
 	char *s;
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	va_start(conspec, format);
 	for (p = format; *p != '\0'; p++)
 	{
