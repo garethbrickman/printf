@@ -7,9 +7,9 @@
  *
  * Return: void
  */
-void _print_number(long int n, int *k)
+void _print_number(int n, int *k)
 {
-	long int y;
+	int y;
 
 	if (n == 0)
 	{
