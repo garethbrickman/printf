@@ -2,10 +2,10 @@
 /**
  * rot13 - function that encodes a string using rot13
  * @s: string
- *
- * Return: rot13 encoded string
+ * @k: counter through string
+ * Return: void
  */
-char *rot13(char *s)
+void *rot13(char *s, int *k)
 {
 	int i, j;
 	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -17,8 +17,8 @@ char *rot13(char *s)
 			if (s[i] == letters[j])
 			{
 				s[i] = rot[j];
+				_putchar((s), k);
 				break;
 			}
 	}
-	return (s);
 }
