@@ -7,9 +7,9 @@
  *
  * Return: void
  */
-void _print_binary(unsigned int n, int *k)
+void _print_binary(int n, int *k)
 {
-	unsigned int y;
+	int y;
 
 	if (n == 0)
 	{
