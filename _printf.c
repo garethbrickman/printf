@@ -47,6 +47,10 @@ int _printf(const char *format, ...)
 			j = va_arg(conspec, int);
 			_print_number(j, &k);
 			break;
+		case 'r':
+			s = va_arg(conspec, char *);
+			_rev_string(s, &k);
+			break;
 		}
 	}
 	va_end(conspec);
