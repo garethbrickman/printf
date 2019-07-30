@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- * rev_string - function reverses a string
+ * _rev_string - function reverses a string
  *
  *@s: char pointer
  *
  * Return: *s
  */
 
-void rev_string(char *s)
+void _rev_string(char *s)
 {
 	int len = _strlen(s);
 	int mid = len / 2;
