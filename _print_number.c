@@ -17,12 +17,16 @@ void _print_number(int n, int *k)
 	}
 	else if (n < 0)
 	{
-		n = n * (-1);
 		_putchar(('-'), k);
 		for (y = 1000000000; y > 0; y = y / 10)
 		{
 			if (n / y != 0)
-				_putchar(((n / y) % 10 + '0'), k);
+			{
+				if (n < -214783647)
+					_putchar((((-n / y) % 10) * -1) + '0');
+				else
+					_putchar(((-n / y) % 10) + '0');
+			}
 		}
 	}
 	else
@@ -30,7 +34,9 @@ void _print_number(int n, int *k)
 		for (y = 1000000000; y > 0; y = y / 10)
 		{
 			if (n / y != 0)
+			{
 				_putchar(((n / y) % 10 + '0'), k);
+			}
 		}
 	}
 }
