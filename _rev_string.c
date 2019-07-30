@@ -11,17 +11,11 @@
 void _rev_string(char *s, int *k)
 {
 	int len = _strlen(s);
-	int mid = len / 2;
-	int count = 0;
-	char tmp;
+	int count = len - 1;
 
-	while (count < mid)
+	while (count >= 0)
 	{
-		tmp = s[count];
-		_putchar((s[count]), k);
-		s[count] = s[len - count - 1];
-		s[len - count - 1] = tmp;
-		_putchar((s[len - count - 1]), k);
-		count++;
+		_putchar(s[count], k);
+		count--;
 	}
 }
