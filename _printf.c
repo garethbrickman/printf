@@ -37,8 +37,6 @@ int _printf(const char *format, ...)
 			_puts(s, &k);
 			break;
 		case '%':
-			if ('%' / 2 && % == 1)
-				return (-1);
 			_putchar('%', &k);
 			break;
 		case 'd':
