@@ -51,6 +51,10 @@ int _printf(const char *format, ...)
 			s = va_arg(conspec, char *);
 			_rev_string(s, &k);
 			break;
+		case 'b' :
+			i = va_arg(conspec, int);
+			_print_binary(i, &k);
+			break;
 		}
 	}
 	va_end(conspec);
