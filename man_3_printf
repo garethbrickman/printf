@@ -43,6 +43,9 @@ The int argument is converted to signed decimal notation, and is written.
 .B r 
 The char* argument of a pointer to an array of characters is reversed, and is written.
 
+.B R
+The char* argument of a pointer to an array of characters is encoded using the ROT13 cipher, and is written.
+
 .B s 
 The char* argument of a pointer to an array of characters is written.
 
