@@ -9,4 +9,5 @@ void _puts(char *str, int *k);
 int _printf(const char *format, ...);
 void _print_number(int n, int *k);
 void _rev_string(char *s, int *k);
+int _strlen(char *s);
 #endif
