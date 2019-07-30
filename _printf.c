@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
 			_puts(s, &k);
 			break;
 		case '%':
+			s = va_arg(conspec, char *);
+			if (*s == '%' && *(s + 1) == '%')
 			_putchar('%', &k);
 			break;
 		case 'd':
