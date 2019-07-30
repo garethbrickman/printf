@@ -17,11 +17,11 @@ void _rot13(char *s, int *k)
 		{
 			if (s[i] == letters[j])
 			{
-				_putchar((rot[j]), k);
+				_putchar(rot[j], k);
 				break;
 			}
 		}
-		if (!(s[i] > 'a' && < 'z') && (!(s[i] > 'A' && < 'Z')))
+		if ((!(s[i] > 'a' && s[i] < 'z')) && (!(s[i] > 'A' && s[i] < 'Z')))
 			_putchar(s[i], k);
 	}
 }
