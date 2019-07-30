@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
 			_print_binary(i, &k);
 			break;
 		case '\0':
-			return (1);
+			return (0);
 		}
 	}
 	va_end(conspec);
