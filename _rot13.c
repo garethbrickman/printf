@@ -5,7 +5,7 @@
  * @k: counter through string
  * Return: void
  */
-void *rot13(char *s, int *k)
+void rot13(char *s, int *k)
 {
 	int i, j;
 	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
