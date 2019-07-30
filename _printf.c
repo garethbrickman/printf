@@ -55,6 +55,10 @@ int _printf(const char *format, ...)
 			i = va_arg(conspec, int);
 			_print_binary(i, &k);
 			break;
+		case 'R':
+			s = va_arg(conspec, char *);
+			_rot13(s, &k);
+			break;
 		case '\0':
 			return (-1);
 		}

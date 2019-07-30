@@ -11,4 +11,5 @@ void _print_number(int n, int *k);
 void _rev_string(char *s, int *k);
 int _strlen(char *s);
 void _print_binary(int n, int *k);
+void _rot13(char *s, int *k);
 #endif
