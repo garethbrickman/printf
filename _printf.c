@@ -53,7 +53,8 @@ int _printf(const char *format, ...)
 			break;
 		case 'R':
 			s = va_arg(conspec, char *);
-			*rot13(s, &k);
+			rot13(s, &k);
+			break;
 		}
 	}
 	va_end(conspec);
