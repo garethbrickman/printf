@@ -37,8 +37,6 @@ int _printf(const char *format, ...)
 			_puts(s, &k);
 			break;
 		case '%':
-			s = va_arg(conspec, char *);
-			if (*s == '%' && *(s + 1) == '%')
 			_putchar('%', &k);
 			break;
 		case 'd':
@@ -53,10 +51,12 @@ int _printf(const char *format, ...)
 			s = va_arg(conspec, char *);
 			_rev_string(s, &k);
 			break;
-		case 'b' :
+		case 'b':
 			i = va_arg(conspec, int);
 			_print_binary(i, &k);
 			break;
+		case '\0':
+			return (1);
 		}
 	}
 	va_end(conspec);
