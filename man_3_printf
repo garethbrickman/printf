@@ -59,8 +59,6 @@ is complete specification.
 .SH BUGS
 
     -b flag does not work in all cases
-    -r flag does not work in all cases
-    -R flag does not work in all cases
 
 .SH AUTHORS
 
