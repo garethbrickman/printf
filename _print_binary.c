@@ -9,28 +9,12 @@
  */
 void _print_binary(int n, int *k)
 {
-	int y;
-
-	if (n == 0)
+	while (n)
 	{
-		_putchar((n + '0'), k);
-	}
-	else if (n < 0)
-	{
-		n = n * (-1);
-		_putchar(('-'), k);
-		for (y = 1000000000; y > 0; y = y / 2)
-		{
-			if (n / y != 0)
-				_putchar(((n / y) % 10 + '0'), k);
-		}
-	}
-	else
-	{
-		for (y = 1000000000; y > 0; y = y / 2)
-		{
-			if (n / y != 0)
-				_putchar(((n / y) % 10 + '0'), k);
-		}
+		if (n & 1)
+			_putchar('0', k);
+		else
+			_putchar('1', k);
+		n >>= 1;
 	}
 }
