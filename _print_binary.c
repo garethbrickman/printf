@@ -1,5 +1,4 @@
-#include"holberton.h"
-
+include "holberton.h"
 /**
  * _print_binary - prints binary number from input
  * @n: The character to print
@@ -9,28 +8,22 @@
  */
 void _print_binary(int n, int *k)
 {
-	int y;
+	char a[1000];
+	int i = 0;
 
-	if (n == 0)
+	while (n)
 	{
-		_putchar((n + '0'), k);
+		if (n & 1)
+			a[i] = (1 + '0');
+		else
+			a[i] = (0 + '0');
+		n >>= 1;
+		i++;
 	}
-	else if (n < 0)
+	i--;
+	while (i >= 0)
 	{
-		n = n * (-1);
-		_putchar(('-'), k);
-		for (y = 1000000000; y > 0; y = y / 2)
-		{
-			if (n / y != 0)
-				_putchar(((n / y) % 10 + '0'), k);
-		}
-	}
-	else
-	{
-		for (y = 1000000000; y > 0; y = y / 2)
-		{
-			if (n / y != 0)
-				_putchar(((n / y) % 10 + '0'), k);
-		}
+		_putchar(a[i], k);
+		i--;
 	}
 }
