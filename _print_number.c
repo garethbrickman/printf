@@ -7,9 +7,9 @@
  *
  * Return: void
  */
-void _print_number(long int n, int *k)
+void _print_number(int n, int *k)
 {
-	long int y;
+	int y;
 
 	if (n == 0)
 	{
@@ -22,7 +22,10 @@ void _print_number(long int n, int *k)
 		{
 			if (n / y != 0)
 			{
-				_putchar(((((n / y) % 10) * -1) + '0'), k);
+				if (n < -214783648)
+					_putchar(((((-n / y) % 10) * -1) + '0'), k);
+				else
+					_putchar((((-n / y) % 10) + '0'), k);
 			}
 		}
 	}
