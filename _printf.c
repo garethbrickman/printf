@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	const char *p;
 	unsigned int i;
-	int j;
+	long int j;
 	int k = 0;
 	va_list conspec;
 	char *s;
@@ -40,11 +40,11 @@ int _printf(const char *format, ...)
 			_putchar('%', &k);
 			break;
 		case 'd':
-			j = va_arg(conspec, int);
+			j = va_arg(conspec, long int);
 			_print_number(j, &k);
 			break;
 		case 'i':
-			j = va_arg(conspec, int);
+			j = va_arg(conspec, long int);
 			_print_number(j, &k);
 			break;
 		case 'r':
@@ -61,6 +61,9 @@ int _printf(const char *format, ...)
 			break;
 		case '\0':
 			return (-1);
+		default:
+			_putchar('%', &k);
+			_putchar(*p, &k);
 		}
 	}
 	va_end(conspec);
